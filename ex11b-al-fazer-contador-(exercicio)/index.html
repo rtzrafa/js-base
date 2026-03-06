@@ -13,7 +13,7 @@
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #645b5b;
     }
 
     #quote {
@@ -29,12 +29,12 @@
       cursor: pointer;
       border: none;
       border-radius: 5px;
-      background-color: #28a745;
-      color: white;
+      background-color: #d92017;
+      color: rgb(248, 248, 248);
     }
 
     button:hover {
-      background-color: #218838;
+      background-color: #d92017;
     }
   </style>
 </head>
@@ -53,11 +53,24 @@
       "A simplicidade é o último grau de sofisticação. – Leonardo da Vinci",
       "O sucesso é a soma de pequenos esforços repetidos dia após dia. – Robert Collier",
       "Acredite que você pode e você já está no meio do caminho. – Theodore Roosevelt",
-      "Não importa o quão devagar você vá, desde que você não pare. – Confúcio"
+      "A melhor maneira de prever o futuro é criá-lo. – Peter Drucker",
+      " Eu sonho com a minha pintura e depois pinto o meu sonho. - Van Gogh",
+      " O homem não é nada além daquilo que a educação faz dele. - Kant",
+      " E lembre-se, com grandes poderes vêm grandes responsabilidades. - Peter Parker",  
     ];
 
-       // 1ª Digitação (Resolva aqui o exercício)
+    // Seleciona o parágrafo e o botão
+    const quoteText = document.getElementById("quote");
+    const button = document.getElementById("newQuoteButton");
 
+    // Função para gerar uma citação aleatória
+    function gerarCitacao() {
+      const indiceAleatorio = Math.floor(Math.random() * quotes.length);
+      quoteText.textContent = quotes[indiceAleatorio];
+    }
+
+    // Evento de clique no botão
+    button.addEventListener("click", gerarCitacao);
 
   </script>
 </body>

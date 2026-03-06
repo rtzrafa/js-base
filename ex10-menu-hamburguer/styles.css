@@ -21,11 +21,15 @@ nav {
 }
 
 /* Estilo do ícone do menu hambúrguer */
-/* .menu-icon {
+ .menu-icon {
 
-  2ª Digitação (Aqui) 
+ /* 2ª Digitação (Aqui) */
+ display: none; /* oculta o icone por padrão (visivel apenas em telas pequenas) */
+ font-size: 1.5rem; /*tamanho do icone */
+ color: white;
+ cursor: pointer;
 
-} */
+} 
 
 /* Estilo da lista de navegação */
 .nav-list {
@@ -50,15 +54,22 @@ nav {
 
 /* Estilos para telas pequenas (max-width: 768px) */
 @media (max-width: 768px) {
-  /* .menu-icon {
+   .menu-icon {
 
-    3ª Digitação (Aqui)
-    
-  }
+   /* 3ª Digitação (Aqui) */
 
-  .nav-list {
+   display: block; /* Exibe o icone de telas pequenas */
+    }
 
-  } */
+    .nav-list {
+    display: none; /* Oculta a lista de navegação */
+    flex-direction: column; /* Exibe os itens em coluna */
+    width: 100%; /* Largura total */
+    background-color: #333;
+    position: absolute; /* Posiciona a lista sobre o conteudo */
+    top: 60px; /* Distancia do topo */
+    left: 0; /* alinha a esquerda */
+   } */
 
   .nav-list li {
     margin: 1rem 0; /* Espaçamento entre os itens */
